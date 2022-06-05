@@ -20,6 +20,12 @@ echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >>.config      # simple-obfs混淆插件
 echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >>.config  # 集成v2ray执行文件（3.8M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
 echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >>.config # 集成trojan执行文件(1.1M左右)，如果不集成，会从网上下载下来执行，不影响正常使用
 
+#  代理
+echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >>.config    # SOCKS proxy
+echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >>.config   # TUNSAFE
+echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >>.config    # srelay
+echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >>.config # IPT2
+echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >>.config # KUMA
 # 文件
 echo "CONFIG_FIRMWARE_INCLUDE_CADDY=y" >>.config    # 在线文件管理服务
 echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >>.config # 集成 caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
@@ -29,10 +35,20 @@ echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >>.config      # adbyby plus+
 echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=n" >>.config   # KP 广告过滤
 echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >>.config # ADGUARD 广告拦截
 
-# 代理
-echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >>.config # KUMA
+# DNS 有关
+echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >>.config # DNS-FORWARDER
+echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >>.config     # smartdns
+echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >>.config  # smartdns二进制文件
 
+#网易云解锁
+echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >>.config
+#网易云解锁GO版本执行文件（4M多）注意固件超大小
+echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >>.config
 # 穿透
 echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >>.config    # 内网穿透FRPC
 echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >>.config    # 内网穿透FRPS
 echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >>.config # 阿里DDNS
+
+# 认证
+echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >>.config  # MENTOHUST 锐捷认证
+echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y" >>.config # SCUT校园网客户端
