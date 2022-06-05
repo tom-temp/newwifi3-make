@@ -44,6 +44,12 @@ sed -i "/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d" .config            # 删除配置项
 sed -i "/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d" .config           # HTTPS support for DDNS client
 sed -i "/CONFIG_FIRMWARE_INCLUDE_HTTPs/d" .config              # HTTPS support
 
+# 自己增加
+sed -i "CONFIG_FIRMWARE_INCLUDE_HTOP/d" .config                # HTOP设置
+sed -i "/CONFIG_FIRMWARE_INCLUDE_QOS/d" .config                # QOS设置
+sed -i "/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d" .config     # 删除配置项 zerotier ~1.3M
+# sed -i "/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d" .config       # 删除配置项
+
 # C大
 sed -i "/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d" .config    # 删除配置项 MENTOHUST 锐捷认证
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d" .config   # 删除配置项 SCUTCLIENT 校园网客户端
@@ -112,4 +118,5 @@ echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >>.config
 # echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=y" >>.config  # MENTOHUST 锐捷认证
 # echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y" >>.config # SCUT校园网客户端
 # echo "CONFIG_FIRMWARE_INCLUDE_CADDYBIN=n" >>.config   # 集成caddu执行文件，此文件有13M,请注意固件大小。如果不集成，会从网上下载下来执行，不影响正常使用
+# echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >>.config   # zerotier ~1.3M
 
