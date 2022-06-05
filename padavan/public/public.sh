@@ -45,7 +45,7 @@ sed -i "/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d" .config           # HTTPS support f
 sed -i "/CONFIG_FIRMWARE_INCLUDE_HTTPs/d" .config              # HTTPS support
 
 # 自己增加
-sed -i "CONFIG_FIRMWARE_INCLUDE_HTOP/d" .config                # HTOP设置
+sed -i "/CONFIG_FIRMWARE_INCLUDE_HTOP/d" .config                # HTOP设置
 sed -i "/CONFIG_FIRMWARE_INCLUDE_QOS/d" .config                # QOS设置
 sed -i "/CONFIG_FIRMWARE_INCLUDE_ZEROTIER/d" .config     # 删除配置项 zerotier ~1.3M
 # sed -i "/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d" .config       # 删除配置项
