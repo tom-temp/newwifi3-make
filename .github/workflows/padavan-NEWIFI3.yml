@@ -18,7 +18,7 @@ on:
 env:
   UPLOAD_FIRMWARE: true # 导出固件
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-  DEVICES:      "PSG1218" # 设备名字数组
+  DEVICES:      "NEWIFI3" # 设备名字数组
 jobs:
   build:
     runs-on: ubuntu-18.04
