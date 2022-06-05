@@ -13,7 +13,7 @@ set -u
 # 1.修改一些默认参数 ./user/shared/defaults.h（需要不同设备不同拷贝到相应sh文件就好)
 USER_NAME="admin"                       # 用户名 admin
 USER_PASSWORD=$USER_NAME                # 用户密码 admin
-LAN_IP="192.168.3"                      # lan 地址 192.168.3.1 一定别写后面的 .1
+LAN_IP="192.168.2"                      # lan 地址 192.168.3.1 一定别写后面的 .1
 WIFI_PASSWORD="1234567890"              # wifi密码，切记密码最少8位 admin
 VERSION_TIME=$(date "+%Y%m%d")          # 自动时间更新时版本号: 20200320
 DEFAULT_PATH="./user/shared/defaults.h" # 默认文件配置目录
@@ -45,8 +45,8 @@ sed -i "/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d" .config           # HTTPS support f
 sed -i "/CONFIG_FIRMWARE_INCLUDE_HTTPs/d" .config              # HTTPS support
 
 # C大
-sed -i "/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d" .config    # 删除配置项 MENTOHUST
-sed -i "/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d" .config   # 删除配置项 SCUTCLIENT
+sed -i "/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d" .config    # 删除配置项 MENTOHUST 锐捷认证
+sed -i "/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT/d" .config   # 删除配置项 SCUTCLIENT 校园网客户端
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKs/d" .config  # 删除配置项 SS plus+
 sed -i "/CONFIG_FIRMWARE_INCLUDE_SSSERVER/d" .config     # 删除配置项 SS server
 sed -i "/CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER/d" .config # 删除配置项 DNS-FORWARDER
